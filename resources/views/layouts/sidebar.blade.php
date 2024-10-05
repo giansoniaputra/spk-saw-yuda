@@ -23,6 +23,12 @@
                 </li>
             </ul>
         </li>
+        <li>
+            <a href="/perhitungan" data-href="/perhitungan">
+                <i data-acorn-icon="home" class="icon" data-acorn-size="18"></i>
+                <span class="label">Perhitungan</span>
+            </a>
+        </li>
     </ul>
 </div>
 <!-- Menu End -->

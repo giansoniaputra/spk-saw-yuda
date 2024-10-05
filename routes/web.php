@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\KriteriaController;
 use App\Http\Controllers\AlternatifController;
+use App\Http\Controllers\PerhitunganController;
 use App\Http\Controllers\SubKriteriaController;
 
 /*
@@ -41,4 +43,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/kriteriaEdit/{kreteria:uuid}', [KriteriaController::class, 'edit']);
     Route::resource('/subKriteria', SubKriteriaController::class);
     Route::get('/dataTablesSubKriteria', [KriteriaController::class, 'dataTablesSubKriteria']);
+    // PERHITUNGAN
+    Route::get('/perhitungan', [PerhitunganController::class, 'index']);
+    Route::post('/perhitungan-update/{perhitungan:uuid}', [PerhitunganController::class, 'update']);
+    Route::post('/cari-keputusan', [PerhitunganController::class, 'cari_keputusan']);
+    // RANKING
+    Route::get('/ranking', [LaporanController::class, 'laporan_ranking']);
 });

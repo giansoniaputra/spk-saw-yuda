@@ -16,8 +16,8 @@
                             <tr>
                                 <th class="text-muted text-small text-uppercase">Kode</th>
                                 <th class="text-muted text-small text-uppercase">Kriteria</th>
-                                <th class="text-muted text-small text-uppercase text-center">Atribut</th>
-                                <th class="text-muted text-small text-uppercase text-center">Bobot</th>
+                                <th class="text-muted text-small text-uppercase">Atribut</th>
+                                <th class="text-muted text-small text-uppercase">Bobot</th>
                                 <th class="text-muted text-small text-uppercase text-center">Action</th>
                             </tr>
                         </thead>

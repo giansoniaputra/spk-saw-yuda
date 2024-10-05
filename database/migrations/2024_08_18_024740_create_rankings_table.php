@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('sub_kriterias', function (Blueprint $table) {
+        Schema::create('rankings', function (Blueprint $table) {
             $table->id();
             $table->uuid('uuid')->unique();
-            $table->string('kriteria_uuid');
-            $table->string('sub_kriteria');
-            $table->float('bobot');
+            $table->string('nama');
+            $table->string('nilai');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('sub_kriterias');
+        Schema::dropIfExists('rankings');
     }
 };

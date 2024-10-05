@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Kriteria;
+use App\Models\Perhitungan;
 use App\Models\SubKriteria;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -125,10 +126,10 @@ class KriteriaController extends Controller
     {
         Kriteria::where('uuid', $request->uuid)->delete();
         SubKriteria::where('kriteria_uuid', $request->uuid)->delete();
-        // $perhitungan = Perhitungan::where('kriteria_uuid', $request->uuid);
-        // if ($perhitungan->first()) {
-        //     $perhitungan->delete();
-        // }
+        $perhitungan = Perhitungan::where('kriteria_uuid', $request->uuid);
+        if ($perhitungan->first()) {
+            $perhitungan->delete();
+        }
         return response()->json(['success' => 'Data Kriteria Berhasil Dihapus']);
     }
 

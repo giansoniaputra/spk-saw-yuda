@@ -36,7 +36,7 @@ $(document).ready(function () {
         ],
         columnDefs: [
             {
-                targets: [3], // index kolom atau sel yang ingin diatur
+                targets: [4], // index kolom atau sel yang ingin diatur
                 className: "text-center", // kelas CSS untuk memposisikan isi ke tengah
             },
             {
@@ -81,9 +81,6 @@ $(document).ready(function () {
                 data: "sub_kriteria",
             },
             {
-                data: "atribut",
-            },
-            {
                 data: "bobot",
             },
             {
@@ -94,7 +91,7 @@ $(document).ready(function () {
         ],
         columnDefs: [
             {
-                targets: [4], // index kolom atau sel yang ingin diatur
+                targets: [3], // index kolom atau sel yang ingin diatur
                 className: "text-center", // kelas CSS untuk memposisikan isi ke tengah
             },
         ],

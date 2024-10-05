@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Alternatif;
+use App\Models\Perhitungan;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Yajra\DataTables\Facades\DataTables;
@@ -106,10 +107,10 @@ class AlternatifController extends Controller
     public function destroy(Alternatif $alternatif)
     {
         Alternatif::destroy($alternatif->id);
-        // $perhitungan = Perhitungan::where('alternatif_uuid', $alternatif->uuid);
-        // if ($perhitungan->first()) {
-        //     $perhitungan->delete();
-        // }
+        $perhitungan = Perhitungan::where('alternatif_uuid', $alternatif->uuid);
+        if ($perhitungan->first()) {
+            $perhitungan->delete();
+        }
         return response()->json(['success' => 'Data Alternatif Berhasil Dihapus!']);
     }
 

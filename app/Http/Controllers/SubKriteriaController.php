@@ -32,12 +32,10 @@ class SubKriteriaController extends Controller
     {
         $rules = [
             'sub_kriteria' => 'required',
-            'atribut' => 'required',
             'bobot' => 'required',
         ];
         $pesan = [
             'sub_kriteria.required' => 'Sub Kriseria Tidak Boleh Kosong',
-            'atribut.required' => 'Atribut Tidak Boleh Kosong',
             'bobot.required' => 'Bobot Tidak Boleh Kosong',
         ];
 
@@ -49,7 +47,6 @@ class SubKriteriaController extends Controller
                 'uuid' => Str::orderedUuid(),
                 'kriteria_uuid' => $request->kriteria_uuid,
                 'sub_kriteria' => $request->sub_kriteria,
-                'atribut' => $request->atribut,
                 'bobot' => $request->bobot,
             ];
             SubKriteria::create($data);
@@ -81,12 +78,10 @@ class SubKriteriaController extends Controller
     {
         $rules = [
             'sub_kriteria' => 'required',
-            'atribut' => 'required',
             'bobot' => 'required',
         ];
         $pesan = [
             'sub_kriteria.required' => 'Sub Kriseria Tidak Boleh Kosong',
-            'atribut.required' => 'Atribut Tidak Boleh Kosong',
             'bobot.required' => 'Bobot Tidak Boleh Kosong',
         ];
 
@@ -96,7 +91,6 @@ class SubKriteriaController extends Controller
         } else {
             $data = [
                 'sub_kriteria' => $request->sub_kriteria,
-                'atribut' => $request->atribut,
                 'bobot' => $request->bobot,
             ];
             SubKriteria::where('uuid', $request->current_uuid)->update($data);

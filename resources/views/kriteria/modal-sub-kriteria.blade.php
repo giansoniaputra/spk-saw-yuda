@@ -19,7 +19,7 @@
                                 <div class="col-sm-3">
                                     <input type="text" class="form-control" name="bobot" id="bobot-sub" placeholder="Masukan Bobot(%)">
                                 </div>
-                                <div class="col-sm-3">
+                                {{-- <div class="col-sm-3">
                                     <div class="form-group mb-3">
                                         <select name="atribut" id="atribut" class="form-control">
                                             <option value="" selected disabled>Pilih Atribut</option>
@@ -27,8 +27,8 @@
                                             <option value="BENEFIT">BENEFIT</option>
                                         </select>
                                     </div>
-                                </div>
-                                <div class="col-sm-3" id="btn-action-add-sub"></div>
+                                </div> --}}
+                                <div class="col-sm-3 d-flex" id="btn-action-add-sub"></div>
                             </div>
                         </form>
                     </div>
@@ -37,7 +37,6 @@
                             <thead>
                                 <th>No</th>
                                 <th>Sub Kriteria</th>
-                                <th>Atribut</th>
                                 <th>bobot</th>
                                 <th>Action</th>
                             </thead>
