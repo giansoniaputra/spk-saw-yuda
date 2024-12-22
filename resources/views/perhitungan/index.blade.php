@@ -39,10 +39,10 @@
                                 @endphp
                                 @foreach($bobots as $bobot)
                                 <td class="text-center" id="nilai-bobot">
-                                    {{-- <p class="p-bobot">{{ $bobot->bobot }}</p> --}}
-                                    <form action="javascript:;" id="form-update-bobot">
+                                    <p class="p-bobot">{{ $bobot->bobot }}</p> 
+                                    {{-- <form action="javascript:;" id="form-update-bobot">
                                         <input type="number" class="form-control input-bobot" data-uuid={{ $bobot->uuid }} value="{{ $bobot->bobot }}" style="width:10vh">
-                                    </form>
+                                    </form> --}}
                                 </td>
                                 @endforeach
                                 @endforeach
