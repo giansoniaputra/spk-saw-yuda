@@ -86,7 +86,7 @@
                                 </a>
                             </div>
                             <div class="mb-5">
-                                <h2 class="cta-1 mb-0 text-primary">LOGIN</h2>
+                                <h2 class="cta-1 mb-0 text-primary">Masuk</h2>
                                 @if (session()->has('error'))
                                 <div class="alert alert-danger" role="alert">
                                     <span>{{ session('error') }}</span>
@@ -100,7 +100,7 @@
                                         <i data-acorn-icon="email"></i>
                                         <input class="form-control @error('username')
                                             is-invalid
-                                        @enderror" placeholder="Username" name="username" />
+                                        @enderror" placeholder="ID Pengguna" name="username" />
                                         @error('username')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
@@ -109,7 +109,7 @@
                                         <i data-acorn-icon="lock-off"></i>
                                         <input class="form-control pe-7 @error('password')
 
-                                        @enderror" name="password" type="password" placeholder="Password" />
+                                        @enderror" name="password" type="password" placeholder="Kata Sandi" />
                                         @error('password')
                                         <small class="text-danger">{{ $message }}</small>
                                         @enderror
