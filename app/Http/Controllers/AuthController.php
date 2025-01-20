@@ -21,8 +21,8 @@ class AuthController extends Controller
             'username' => 'required',
             'password' => 'required',
         ], [
-            'username.required' => 'Username tidak boleh kosong',
-            'password.required' => 'Password tidak boleh kosong',
+            'username.required' => 'ID Pengguna tidak boleh kosong',
+            'password.required' => 'Kata Sandi tidak boleh kosong',
         ]);
 
         if (Auth::attempt($credentials)) {
@@ -45,7 +45,7 @@ class AuthController extends Controller
     public function register()
     {
         $data = [
-            'title' => 'Register User',
+            'title' => 'Pengguna Baru',
         ];
         return view('auth.register', $data);
     }
@@ -71,13 +71,13 @@ class AuthController extends Controller
             'password_confirmation' => 'required',
         ];
         $pesan = [
-            'username.required' => 'Username Tidak Boleh Kosong',
-            'username.min' => 'Username Minimal 7 Character',
+            'username.required' => 'ID Pengguna Tidak Boleh Kosong',
+            'username.min' => 'ID Pengguna Minimal 7 Character',
             'name.required' => 'Nama Tidak Boleh Kosong',
-            'password.required' => 'Password Tidak Boleh Kosong',
-            'password.confirmed' => 'Password Tidak Sesuai/Sama',
-            'password.min' => 'Password Minimal 7 Karakter',
-            'password_confirmation.required' => 'Konfirmasi Password Tidak Boleh Kosong',
+            'password.required' => 'Kata Sandi Tidak Boleh Kosong',
+            'password.confirmed' => 'Kata Sandi Tidak Sesuai/Sama',
+            'password.min' => 'Kata Sandi Minimal 7 Karakter',
+            'password_confirmation.required' => 'Konfirmasi Kata Sandi Tidak Boleh Kosong',
         ];
         $validator = Validator::make($request->all(), $rules, $pesan);
         if ($validator->fails()) {
@@ -89,7 +89,7 @@ class AuthController extends Controller
                 'password' => bcrypt($request->password),
             ];
             User::create($data);
-            return response()->json(['success' => "Data User Berhasil Ditambahakan"]);
+            return response()->json(['success' => "Data Pengguna Berhasil Ditambahakan"]);
         }
     }
 }
