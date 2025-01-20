@@ -150,7 +150,7 @@
                                     <li>
                                         <a href="/logout" onclick="return confirm('Yakin ingin keluar?')">
                                             <i data-acorn-icon="logout" class="me-2" data-acorn-size="17"></i>
-                                            <span class="align-middle">Logout</span>
+                                            <span class="align-middle">Keluar</span>
                                         </a>
                                     </li>
                                 </ul>
