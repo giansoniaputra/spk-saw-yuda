@@ -25,12 +25,12 @@ Route::post('/authenticate', [AuthController::class, 'authenticate']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('welcome', [
-            'title' => 'Dashboard'
+            'title' => 'Halaman Utama'
         ]);
     });
     Route::get('/home', function () {
         return view('welcome', [
-            'title' => 'Dashboard'
+            'title' => 'Halaman Utama'
         ]);
     });
     Route::get('/logout', [AuthController::class, 'logout']);
