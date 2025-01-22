@@ -4,7 +4,7 @@
         <li>
             <a href="/" data-href="/">
                 <i data-acorn-icon="home" class="icon" data-acorn-size="18"></i>
-                <span class="label">Dashboards</span>
+                <span class="label">Halaman Utama</span>
             </a>
         </li>
         <li>
