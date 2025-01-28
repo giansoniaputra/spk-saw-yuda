@@ -40,9 +40,27 @@
                                 @foreach($bobots as $bobot)
                                 <td class="text-center" id="nilai-bobot">
                                     {{-- <p class="p-bobot">{{ $bobot->bobot }}</p> --}}
-                                     <form action="javascript:;" id="form-update-bobot">
-                                        <input type="number" class="form-control input-bobot" data-uuid={{ $bobot->uuid }} value="{{ $bobot->bobot }}" style="width:10vh">
-                                    </form> 
+                                    <form action="javascript:;" id="form-update-bobot">
+                                        {{-- <input type="number" class="form-control input-bobot" data-uuid={{ $bobot->uuid }} value="{{ $bobot->bobot }}" style="width:10vh"> --}}
+                                        <div class="mb-3">
+                                            <select class="form-select form-select-lg input-bobot" data-uuid={{ $bobot->uuid }}>
+                                                @php
+                                                $getSubs = getSub($kriteria->uuid);
+                                                @endphp
+                                                @if($bobot->bobot == 0)
+                                                <option value="{{ $bobot->bobot }}" selected disabled>Silahkan Pilih</option>
+                                                @foreach ($getSubs as $getSub)
+                                                <option value="{{ $getSub->bobot }}">{{ $getSub->sub_kriteria }} ({{ $getSub->bobot }})</option>
+                                                @endforeach
+                                                @else
+                                                @foreach ($getSubs as $getSub)
+                                                <option value="{{ $getSub->bobot }}" {{ ($getSub->bobot == $bobot->bobot) ? 'selected' : '' }}>{{ $getSub->sub_kriteria }} ({{ $getSub->bobot }})</option>
+                                                @endforeach
+                                                @endif
+                                            </select>
+                                        </div>
+
+                                    </form>
                                 </td>
                                 @endforeach
                                 @endforeach

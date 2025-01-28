@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#table-perhitungan").on("keyup", ".input-bobot", function () {
+    $("#table-perhitungan").on("change", ".input-bobot", function () {
         let thiss = $(this)
         // let p = $(this).parent().prev()
         let uuid = $(this).data("uuid")
